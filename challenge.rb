@@ -1,3 +1,13 @@
+require 'sinatra'
+get '/' do
+  erb :index
+end
+
+get '/balance' do
+  erb :index
+  @result = balance(params[:string])
+end
+
 #Programa para definir si un mensaje tiene los parentesis desbalanceados o no
 
 def balance(string)
